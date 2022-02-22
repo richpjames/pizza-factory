@@ -1,5 +1,6 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import App from "./App";
 
 describe("App", () => {
@@ -23,5 +24,10 @@ describe("App", () => {
   it("dough component should be active initially", () => {
     render(<App />);
     screen.getByText(/dough active/);
+  });
+  it("when dough comps onDone is fired, Sauce should be active", () => {
+    render(<App />);
+    userEvent.click(screen.getByText("dough button"));
+    screen.getByText(/sauce active/);
   });
 });
