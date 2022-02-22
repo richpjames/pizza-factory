@@ -7,7 +7,7 @@ interface DoughProps {
 export const Dough: React.FC<DoughProps> = ({ active }) => {
   return (
     <div data-state={active}>
-      {active && "active"}
+      {active && "dough active"}
       dough selection
     </div>
   );
