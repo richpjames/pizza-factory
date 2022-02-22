@@ -11,7 +11,7 @@ export const Dough: React.FC<DoughProps> = ({ active, onDone, onError }) => {
     <div data-state={active}>
       {active && "dough active"}
       dough selection
-      <button onClick={onDone}>done</button>
+      <button onClick={onDone}>dough button</button>
       <button onClick={onError}>error</button>
     </div>
   );

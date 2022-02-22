@@ -11,7 +11,7 @@ describe("Dough", () => {
   it("fires onDone callback when button is clicked", () => {
     const mockFn = jest.fn();
     render(<Dough active onDone={mockFn} onError={() => {}} />);
-    userEvent.click(screen.getByText("done"));
+    userEvent.click(screen.getByText("dough button"));
     expect(mockFn).toHaveBeenCalledTimes(1);
   });
   it("fires onError callback when error happens", () => {
