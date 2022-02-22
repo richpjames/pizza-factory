@@ -7,10 +7,7 @@ describe("App", () => {
     render(<App />);
     screen.getByText(/dough selection/);
   });
-  it("dough component should be active initially", () => {
-    render(<App />);
-    screen.getByText(/dough active/);
-  });
+
   it("renders the sauce component", () => {
     render(<App />);
     screen.getByText(/sauce selection/);
@@ -22,5 +19,9 @@ describe("App", () => {
   it("renders the cooking component", () => {
     render(<App />);
     screen.getByText(/cooking selection/);
+  });
+  it("dough component should be active initially", () => {
+    render(<App />);
+    screen.getByText(/dough active/);
   });
 });

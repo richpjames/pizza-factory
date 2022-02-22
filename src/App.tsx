@@ -7,7 +7,7 @@ import { Cooking } from "./components/Cooking";
 function App() {
   return (
     <div className="App">
-      <Dough active />
+      <Dough active onDone={() => {}} onError={() => {}} />
       <Sauce />
       <Topping />
       <Cooking />
