@@ -7,4 +7,9 @@ describe("Dough", () => {
     render(<Dough active />);
     screen.getByText(/dough active/);
   });
+  it("fires onDone callback when button is clicked", () => {
+    const mockFn = jest.fn();
+    render(<Dough active onDone={mockFn} />);
+    screen.getByText(/dough active/);
+  });
 });

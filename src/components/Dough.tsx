@@ -2,6 +2,7 @@ import React from "react";
 
 interface DoughProps {
   active?: boolean;
+  onDone: () => void;
 }
 
 export const Dough: React.FC<DoughProps> = ({ active }) => {
