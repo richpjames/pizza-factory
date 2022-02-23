@@ -4,7 +4,7 @@ import { Sauce } from "./components/Sauce";
 import { Topping } from "./components/Topping";
 import { Cooking } from "./components/Cooking";
 
-type ComponentNames = "dough" | "sauce";
+type ComponentNames = "dough" | "sauce" | "topping" | "cooking";
 
 function App() {
   const [activeComponent, setActiveComponent] =
@@ -20,11 +20,23 @@ function App() {
       />
       <Sauce
         active={activeComponent === "sauce"}
+        onDone={() => {
+          setActiveComponent("topping");
+        }}
+        onError={() => {}}
+      />
+      <Topping
+        active={activeComponent === "topping"}
+        onDone={() => {
+          setActiveComponent("cooking");
+        }}
+        onError={() => {}}
+      />
+      <Cooking
+        active={activeComponent === "cooking"}
         onDone={() => {}}
         onError={() => {}}
       />
-      <Topping />
-      <Cooking />
     </div>
   );
 }

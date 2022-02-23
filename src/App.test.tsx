@@ -30,4 +30,17 @@ describe("App", () => {
     userEvent.click(screen.getByText("dough button"));
     screen.getByText(/sauce active/);
   });
+  it("when Sauce comps onDone is fired, Topping should be active", () => {
+    render(<App />);
+    userEvent.click(screen.getByText("dough button"));
+    userEvent.click(screen.getByText("sauce button"));
+    screen.getByText(/topping active/);
+  });
+  it("when Topping comps onDone is fired, Cooking should be active", () => {
+    render(<App />);
+    userEvent.click(screen.getByText("dough button"));
+    userEvent.click(screen.getByText("sauce button"));
+    userEvent.click(screen.getByText("topping button"));
+    screen.getByText(/cooking active/);
+  });
 });
